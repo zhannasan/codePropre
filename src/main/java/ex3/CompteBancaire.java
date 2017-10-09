@@ -52,6 +52,12 @@ public class CompteBancaire {
 		}
 	}
 	
+	public void appliquerRemuAnnuelle(){
+		if (type.equals("LA")){
+			this.solde = solde + solde*tauxRemuneration/100;
+		}
+	}
+	
 	/** Ce constructeur est utilisé pour créer un compte de type Livret A
 	 * @param type = LA
 	 * @param solde représente le solde du compte

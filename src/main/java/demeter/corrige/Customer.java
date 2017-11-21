@@ -25,7 +25,7 @@ public class Customer {
 	 * 
 	 * @return the wallet
 	 */
-	public Wallet getWallet() {
+	protected Wallet getWallet() {
 		return wallet;
 	}
 
@@ -35,7 +35,7 @@ public class Customer {
 	 * @param wallet
 	 *            the wallet to set
 	 */
-	public void setWallet(Wallet wallet) {
+	protected void setWallet(Wallet wallet) {
 		this.wallet = wallet;
 	}
 }

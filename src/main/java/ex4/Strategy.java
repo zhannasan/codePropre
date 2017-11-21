@@ -1,4 +1,4 @@
-package ex5;
+package ex4;
 
 public interface Strategy {
 

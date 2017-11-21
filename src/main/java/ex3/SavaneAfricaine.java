@@ -1,8 +1,8 @@
-package ex4;
+package ex3;
 
 import java.util.List;
 
-public class FermeReptile {
+public class SavaneAfricaine {
 
 	private List<String> types;
 	private List<String> noms;
@@ -24,7 +24,7 @@ public class FermeReptile {
 		return noms.size();
 	}
 	
-	public double calculerKgsNourritureParJour(){
-		return noms.size() * 0.1;
+	public int calculerKgsNourritureParJour(){
+		return noms.size() * 10;
 	}
 }

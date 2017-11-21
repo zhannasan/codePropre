@@ -1,4 +1,4 @@
-package ex3;
+package ex2;
 
 public class LivretA extends CompteBancaire {
 

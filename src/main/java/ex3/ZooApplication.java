@@ -3,6 +3,7 @@ package ex3;
 public class ZooApplication {
 
 	public static void main(String[] args) {
+		
 		Zoo zoo = new Zoo("Thoiry");
 		
 		zoo.addAnimal("Gazelle", "MAMMIFERE", "HERBIVORE");

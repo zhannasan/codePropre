@@ -1,5 +1,8 @@
 package ex3;
 
+/**
+ * @author DIGINAMIC
+ */
 public class Zoo {
 
 	private String nom;

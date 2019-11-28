@@ -1,16 +1,27 @@
 package ex3;
 
-/** Représente une ferme de reptile
- * @author DIGINAMIC
- */
-public class FermeReptile extends Zone {
+import java.util.List;
 
-	/** Masse moyenne en kg de nourriture consommée par 1 reptile */
-	private static final double MASSE_NOURRITURE = 0.1;
+public class FermeReptile {
 
-	@Override
-	public double getPoids() {
-		return MASSE_NOURRITURE;
+	private List<String> types;
+	private List<String> noms;
+	private List<String> comportements;
+	
+	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
+		types.add(typeAnimal);
+		noms.add(nomAnimal);
+		comportements.add(comportement);
+	}
+	
+	public void afficherListeAnimaux(){
+		for (String nom: noms){
+			System.out.println(nom);
+		}
+	}
+	
+	public double calculerKgsNourritureParJour(){
+		return noms.size() * 10;
 	}
 
 }

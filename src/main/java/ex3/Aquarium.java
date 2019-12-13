@@ -1,26 +1,28 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Aquarium {
+public class Aquarium extends ZoneZoo{
+	List<Animal> aquarium  = new ArrayList<Animal>();
+	private static final String Zoo_A="Aquarium";
 
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
-	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+	/**
+	 * @return the aquarium
+	 */
+	public List<Animal> getAquarium() {
+		return aquarium;
 	}
-	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
+
+	/**
+	 * @param aquarium the aquarium to set
+	 */
+	public void setAquarium(List<Animal> aquarium) {
+		this.aquarium = aquarium;
 	}
-	
+
+	@Override
 	public double calculerKgsNourritureParJour(){
-		return noms.size() * 0.2;
+		return animal.getSize() * 0.2;
 	}
 }

@@ -1,27 +1,26 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class FermeReptile {
-
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
-	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+public class FermeReptile extends ZoneZoo{
+	List<Animal> fermeReptile = new ArrayList<Animal>();
+	private static final String Zoo_FR="FermeReptile";
+	/**
+	 * @return the fermeReptile
+	 */
+	public List<Animal> getFermeReptile() {
+		return fermeReptile;
+	}
+	/**
+	 * @param fermeReptile the fermeReptile to set
+	 */
+	public void setFermeReptile(List<Animal> fermeReptile) {
+		this.fermeReptile = fermeReptile;
 	}
 	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
+	public String getType(){
+		return Zoo_FR;
 	}
 	
-	public double calculerKgsNourritureParJour(){
-		return noms.size() * 10;
-	}
-
 }

@@ -1,40 +1,47 @@
 package ex3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author DIGINAMIC
  */
 public class Zoo {
 
 	private String nom;
-	private SavaneAfricaine savaneAfricaine;
-	private ZoneCarnivore zoneCarnivore;
-	private FermeReptile fermeReptile;
-	private Aquarium aquarium;
+	/*private List<Animal> savaneAfricaine;
+	private List<Animal> zoneCarnivore;
+	private List<Animal> fermeReptile;
+	private List<Animal> aquarium;
+*/
+	List<ZoneZoo> zoo = new ArrayList<>();
 	
 	public Zoo(String nom){
 		this.nom = nom;
 	}
 	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
+	
+	public void addAnimal(Animal animal){
+		List<Animal> zoneCarnivore = new ArrayList<>();
+		List<Animal> fermeReptile = new ArrayList<>();
+		List<Animal> aquarium = new ArrayList<>();
+		if (animal.getTypeAnimal().equalsIgnoreCase("MAMMIFERE") && animal.getComportement().equalsIgnoreCase("CARNIVORE")){
+			zoneCarnivore.add(animal);
 		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypeAnimal().equalsIgnoreCase("MAMMIFERE") && animal.getComportement().equalsIgnoreCase("HERBIVORE")){
+			savaneAfricaine.add(animal);
 		}
-		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypeAnimal().equalsIgnoreCase("REPTILE")){
+			fermeReptile.add(animal);
 		}
-		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
+		else if (animal.getTypeAnimal().equalsIgnoreCase("POISSON")){
+			aquarium.add(animal);
 		}
 	}
 	
 	public void afficherListeAnimaux(){
-		savaneAfricaine.afficherListeAnimaux();
-		zoneCarnivore.afficherListeAnimaux();
-		fermeReptile.afficherListeAnimaux();
-		aquarium.afficherListeAnimaux();
+		
+		System.out.println();
 	}
 
 	/** Getter for nom

@@ -1,26 +1,26 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ZoneCarnivore {
+public class ZoneCarnivore extends ZoneZoo{
+	List<Animal> zoneCarnivore = new ArrayList<Animal>();
+	
+	private static final String Zoo_ZC="ZoneCarnivore";
 
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
-	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
+	/**
+	 * @return the zoneCarnivore
+	 */
+	public List<Animal> getZoneCarnivore() {
+		return zoneCarnivore;
+	}
+
+	/**
+	 * @param zoneCarnivore the zoneCarnivore to set
+	 */
+	public void setZoneCarnivore(List<Animal> zoneCarnivore) {
+		this.zoneCarnivore = zoneCarnivore;
 	}
 	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
-	}
 	
-	public double calculerKgsNourritureParJour(){
-		return noms.size() * 10;
-	}
 }

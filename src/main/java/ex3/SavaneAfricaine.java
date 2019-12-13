@@ -1,27 +1,24 @@
 package ex3;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class SavaneAfricaine {
+public class SavaneAfricaine  extends ZoneZoo{
+	List<Animal> savaneAfricaine = new ArrayList<Animal>();
+	
+	private static final String Zoo_SA="SavaneAfricaine";
+	/**
+	 * @return the savaneAfricaine
+	 */
+	public List<Animal> getSavaneAfricaine() {
+		return savaneAfricaine;
+	}
+	/**
+	 * @param savaneAfricaine the savaneAfricaine to set
+	 */
+	public void setSavaneAfricaine(List<Animal> savaneAfricaine) {
+		this.savaneAfricaine = savaneAfricaine;
+	}
 
-	private List<String> types;
-	private List<String> noms;
-	private List<String> comportements;
-	
-	public void addAnimal(String typeAnimal, String nomAnimal, String comportement) {
-		types.add(typeAnimal);
-		noms.add(nomAnimal);
-		comportements.add(comportement);
-	}
-	
-	public void afficherListeAnimaux(){
-		for (String nom: noms){
-			System.out.println(nom);
-		}
-	}
-	
-	public int compterAnimaux(){
-		return noms.size();
-	}
 
 }

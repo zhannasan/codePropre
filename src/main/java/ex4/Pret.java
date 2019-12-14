@@ -1,50 +1,50 @@
 package ex4;
 
-import java.util.Date;
-
-public class Pret extends PretATerme{
-	private Date dateDebut;
-	private Date dateFin;
-	
+public class Pret implements Strategy{
+	private double capital;
+	private double capitalRestantDu;
+	private double taux;
+	private Strategy strategy;
 	/**
 	 * @param capital
 	 * @param capitalRestantDu
 	 * @param taux
-	 * @param dateDebut
-	 * @param dateFin
 	 */
-	public Pret(double capital, double capitalRestantDu, double taux, Date dateDebut, Date dateFin) {
-		super(capital, capitalRestantDu, taux);
-		this.dateDebut = dateDebut;
-		this.dateFin = dateFin;
+	public Pret(double capital, double capitalRestantDu, double taux) {
+		this.capital = capital;
+		this.capitalRestantDu = capitalRestantDu;
+		this.taux = taux;
 	}
-
-	/** Getter for dateDebut
-	 * @return the dateDebut
+	/**
+	 * @return the capital
 	 */
-	public Date getDateDebut() {
-		return dateDebut;
+	public double getCapital() {
+		return capital;
+	}
+	/**
+	 * @return the capitalRestantDu
+	 */
+	public double getCapitalRestantDu() {
+		return capitalRestantDu;
+	}
+	/**
+	 * @return the taux
+	 */
+	public double getTaux() {
+		return taux;
+	}
+	/** Getter for strategy
+	 * @return the strategy
+	 */
+	public Strategy getStrategy() {
+		return strategy;
 	}
 
 	/** Setter
-	 * @param dateDebut the dateDebut to set
+	 * @param strategy the strategy to set
 	 */
-	public void setDateDebut(Date dateDebut) {
-		this.dateDebut = dateDebut;
-	}
-
-	/** Getter for dateFin
-	 * @return the dateFin
-	 */
-	public Date getDateFin() {
-		return dateFin;
-	}
-
-	/** Setter
-	 * @param dateFin the dateFin to set
-	 */
-	public void setDateFin(Date dateFin) {
-		this.dateFin = dateFin;
+	public void setStrategy(Strategy strategy) {
+		this.strategy = strategy;
 	}
 	
 }

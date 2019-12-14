@@ -6,7 +6,7 @@ import java.util.List;
 public class ZoneCarnivore extends ZoneZoo{
 	List<Animal> zoneCarnivore = new ArrayList<Animal>();
 	
-	private static final String Zoo_ZC="ZoneCarnivore";
+	private static final String Zoo_ZC="Zone Carnivore";
 
 	/**
 	 * @return the zoneCarnivore
@@ -22,5 +22,11 @@ public class ZoneCarnivore extends ZoneZoo{
 		this.zoneCarnivore = zoneCarnivore;
 	}
 	
+	/**
+	 * @return get le type de zone "Zone Carnivore"
+	 */
+	public String getZone(){
+		return Zoo_ZC;
+	}
 	
 }
